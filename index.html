@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Boost31 helpt ondernemers en bedrijven om ambities te vertalen naar concrete resultaten. Strategie, organisatieontwikkeling, leiderschap en executie.">
+<meta name="robots" content="noindex">
+<title>Boost31 · Organisatie &amp; Groei</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: editorial split hero, menu left / logo right, a People-Product-Process triad as the signature diagram, then services as a two-column ledger */
+:root{
+  --paper:#F6F4F2; --surface:#FFFFFF; --ink:#1E1A17; --muted:#655C54;
+  --pine:#F6AA66; --pine-text:#D9782B; --brass:#B4561C; --line:#E2DBD3; --on-pine:#1E1A17; --band:#E6E2DE;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"Newsreader",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#171412; --surface:#201C19; --ink:#EEE9E3; --muted:#A89F95;
+  --pine:#F6AA66; --pine-text:#F6AA66; --brass:#EE9A5C; --line:#36302B; --on-pine:#171412; --band:#26211E; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#171412; --surface:#201C19; --ink:#EEE9E3; --muted:#A89F95;
+  --pine:#F6AA66; --pine-text:#F6AA66; --brass:#EE9A5C; --line:#36302B; --on-pine:#171412; --band:#26211E; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.15rem;line-height:1.6}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.08}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+
+/* Header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+nav{display:flex;gap:clamp(12px,3vw,28px);flex-wrap:wrap;font-family:var(--display);font-size:.95rem}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.logo{display:flex;align-items:baseline;gap:2px;text-decoration:none;font-family:var(--display);font-weight:800;font-size:1.55rem;letter-spacing:-.02em}
+.logo b{color:var(--brass);font-weight:800}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(28px,5vw,64px);padding-block:clamp(48px,8vw,96px) clamp(40px,6vw,72px);align-items:end}
+.hero > *{min-width:0}
+.hero h1{font-size:clamp(2.5rem,6.2vw,4.6rem);font-weight:800;letter-spacing:-.03em;margin-top:18px}
+.hero h1 em{font-style:normal;color:var(--pine-text)}
+.tagline{font-family:var(--display);font-size:1.1rem;color:var(--muted);margin-top:22px;display:flex;gap:10px;flex-wrap:wrap}
+.tagline span+span::before{content:"·";margin-right:10px;color:var(--brass)}
+.hero-side{display:grid;gap:20px;border-left:2px solid var(--brass);padding-left:24px}
+.hero-side p{color:var(--muted)}
+.btn{display:inline-block;align-self:start;justify-self:start;background:var(--pine);color:var(--on-pine);font-family:var(--display);font-weight:600;text-decoration:none;padding:13px 22px;border-radius:2px}
+.btn:hover{filter:brightness(1.1)}
+
+/* About */
+.about{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,5vw,64px);padding-block:clamp(48px,7vw,80px);border-top:1px solid var(--line)}
+.about > *{min-width:0}
+.years{font-family:var(--display);font-weight:800;font-size:clamp(4.5rem,11vw,8rem);line-height:.85;color:var(--pine-text);letter-spacing:-.05em}
+.years small{display:block;font-family:var(--mono);font-size:.75rem;font-weight:400;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:14px}
+.about-text{display:grid;gap:18px;max-width:62ch}
+.about-text .lead{font-size:1.4rem;line-height:1.45}
+
+/* Triad */
+.triad{background:var(--surface);border-block:1px solid var(--line);padding-block:clamp(48px,7vw,80px)}
+.triad-head{display:grid;gap:12px;max-width:60ch;margin-bottom:36px}
+.triad-head h2{font-size:clamp(1.8rem,3.6vw,2.6rem);font-weight:600}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line)}
+.pillar{padding:28px 24px;display:grid;gap:10px;align-content:start}
+.pillar+.pillar{border-left:1px solid var(--line)}
+.pillar h3{font-size:1.6rem;font-weight:800;letter-spacing:-.02em}
+.pillar p{color:var(--muted);font-size:1.05rem}
+.pillar .k{font-family:var(--mono);font-size:.72rem;color:var(--brass);letter-spacing:.1em}
+
+/* Services */
+.services{padding-block:clamp(56px,8vw,96px)}
+.services h2{font-size:clamp(2rem,4.2vw,3rem);font-weight:800;letter-spacing:-.02em;margin-top:12px;margin-bottom:40px}
+.ledger{display:grid;grid-template-columns:1fr 1fr;gap:0 clamp(24px,5vw,64px)}
+.svc{display:grid;gap:10px;padding-block:28px;border-top:1px solid var(--ink)}
+.svc h3{font-size:1.45rem;font-weight:600}
+.svc p{color:var(--muted)}
+
+/* Approach */
+.approach{background:var(--band);color:var(--ink);padding-block:clamp(56px,8vw,96px)}
+.approach-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:clamp(28px,5vw,64px);align-items:start}
+.approach-grid > *{min-width:0}
+.approach h2{font-size:clamp(2rem,4.4vw,3.2rem);font-weight:800;letter-spacing:-.02em;margin-top:12px}
+.approach-text{display:grid;gap:18px;font-size:1.2rem;max-width:58ch}
+.verbs{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.verbs span{font-family:var(--mono);font-size:.8rem;border:1px solid currentColor;padding:6px 10px;border-radius:2px}
+
+/* Closing */
+.closing{padding-block:clamp(56px,8vw,96px);display:grid;gap:24px;justify-items:start}
+.closing p.big{font-family:var(--display);font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:600;line-height:1.25;max-width:30ch;text-wrap:balance}
+.contact{display:grid;grid-template-columns:repeat(3,auto);gap:12px 40px;font-family:var(--mono);font-size:.9rem;color:var(--muted)}
+.contact b{display:block;font-weight:500;color:var(--ink);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.ph{background:color-mix(in srgb,var(--brass) 18%,transparent);color:var(--ink);padding:1px 6px}
+
+footer{border-top:1px solid var(--line);padding-block:22px;font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:820px){
+  .hero,.approach-grid,.about{grid-template-columns:1fr}
+  .ledger{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr}
+  .pillar+.pillar{border-left:0;border-top:1px solid var(--line)}
+  .contact{grid-template-columns:1fr}
+}
+@media (max-width:560px){ nav a:nth-child(n+3){display:none} }
+@media (prefers-reduced-motion:no-preference){
+  .hero h1,.hero .tagline,.hero-side{animation:rise .7s ease-out both}
+  .hero .tagline{animation-delay:.08s}.hero-side{animation-delay:.16s}
+  @keyframes rise{from{transform:translateY(10px)}to{transform:none}}
+}
+</style>
+<style>html{scroll-behavior:smooth}body{margin:0}img{max-width:100%}</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <nav aria-label="Hoofdmenu">
+      <a href="#diensten">Diensten</a>
+      <a href="#aanpak">Aanpak</a>
+      <a href="#over">Over</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="logo" href="#top" aria-label="Boost31 home">Boost<b>31</b></a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="wrap hero">
+    <div>
+      <div class="eyebrow">Boost31 · voor Organisatie &amp; Groei</div>
+      <h1>Ambities vertalen naar <em>concrete resultaten.</em></h1>
+      <div class="tagline"><span>Strategisch inzicht</span><span>Ondernemerschap</span><span>Resultaat</span></div>
+    </div>
+    <div class="hero-side">
+      <p>Iedere organisatie heeft ambities. Duurzame groei vraagt meer dan een goede strategie of commerciële kansen. Het vraagt om een organisatie waarin mensen, processen en proposities op elkaar zijn afgestemd, met helder leiderschap en de slagkracht om plannen te realiseren.</p>
+      <a class="btn" href="#contact">Plan een kennismaking</a>
+    </div>
+  </section>
+
+  <section class="wrap about" id="over">
+    <div class="years">25+<small>jaar directie- &amp; managementervaring</small></div>
+    <div class="about-text">
+      <p class="lead">Van start- en scale-ups tot beursgenoteerde organisaties: ik breng strategisch inzicht, commerciële ervaring en praktische executiekracht samen.</p>
+      <p>Niet alleen vanuit de theorie, maar vooral vanuit de dagelijkse praktijk en eigen verantwoordelijkheid voor mensen, klanten en bedrijfsresultaten.</p>
+      <p>Vanuit Boost31 ondersteun ik ondernemers, directies en managementteams bij het versterken van hun organisatie en het realiseren van duurzame, winstgevende groei.</p>
+    </div>
+  </section>
+
+  <section class="triad">
+    <div class="wrap">
+      <div class="triad-head">
+        <div class="eyebrow">Samenhang</div>
+        <h2>Groei ontstaat waar mensen, product en proces op elkaar aansluiten.</h2>
+      </div>
+      <div class="pillars">
+        <div class="pillar"><span class="k">PEOPLE</span><h3>Mensen</h3><p>Helder leiderschap, eigenaarschap en vertrouwen in teams.</p></div>
+        <div class="pillar"><span class="k">PRODUCT</span><h3>Propositie</h3><p>Scherpe commerciële proposities en verdienmodellen.</p></div>
+        <div class="pillar"><span class="k">PROCESS</span><h3>Proces</h3><p>Structuur, verantwoordelijkheden en operationele effectiviteit.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap services" id="diensten">
+    <div class="eyebrow">Diensten</div>
+    <h2>Waarmee Boost31 het verschil maakt</h2>
+    <div class="ledger">
+      <article class="svc"><h3>Strategie &amp; Groei</h3><p>Het ontwikkelen en aanscherpen van groeistrategieën, commerciële proposities en verdienmodellen. Van nieuwe marktkansen tot sterkere klantrelaties en structurele omzetgroei.</p></article>
+      <article class="svc"><h3>Organisatieontwikkeling &amp; verandering</h3><p>Samenhang creëren tussen People, Product &amp; Process. Met aandacht voor structuur, verantwoordelijkheden, samenwerking en operationele effectiviteit.</p></article>
+      <article class="svc"><h3>Leiderschap &amp; Executive coaching</h3><p>Begeleiding van ondernemers, directies en managementteams bij leiderschapsvraagstukken, besluitvorming en persoonlijke ontwikkeling.</p></article>
+      <article class="svc"><h3>Executie &amp; Resultaatverbetering</h3><p>Strategische keuzes vertalen naar concrete acties, duidelijke prioriteiten en meetbare resultaten. Waar nodig help ik actief mee bij implementatie en realisatie.</p></article>
+    </div>
+  </section>
+
+  <section class="approach" id="aanpak">
+    <div class="wrap approach-grid">
+      <div>
+        <div class="eyebrow">Aanpak</div>
+        <h2>Persoonlijk betrokken, zakelijk gedreven.</h2>
+      </div>
+      <div class="approach-text">
+        <p>Mijn aanpak is betrokken, onafhankelijk en pragmatisch. Ik combineer een strategische blik met een hands-on mentaliteit en werk nauw samen met ondernemers en managementteams.</p>
+        <p>Niet het advies staat centraal, maar het resultaat dat we samen willen bereiken.</p>
+        <div class="verbs"><span>Kritische vragen stellen</span><span>Structuur aanbrengen</span><span>Mensen verbinden</span><span>Keuzes maken</span><span>Vooruitgang boeken</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap closing" id="contact">
+    <div class="eyebrow">Samenwerken</div>
+    <p class="big">Ervaring, ondernemerschap en executiekracht. Met één doel: organisaties sterker maken en duurzame groei realiseren.</p>
+    <div class="contact">
+      <div><b>E-mail</b><span class="ph">[e-mailadres]</span></div>
+      <div><b>Telefoon</b><span class="ph">[telefoonnummer]</span></div>
+      <div><b>LinkedIn</b><span class="ph">[profiel-URL]</span></div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Boost31 is een activiteit van Soundboard BV</span>
+    <span>KVK 24440201</span>
+  </div>
+</footer>
+</body>
+</html>
